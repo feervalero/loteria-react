@@ -1,0 +1,35 @@
+[
+    {
+        "Id":"401196dd-e06e-e911-a5ec-10e7c672dd80",
+        "PriceId":"08729ef0-ba12-e911-9539-b4d5bde08f16",
+        "ProductFeatureId":null,
+        "ModuleId":"09729ef0-ba12-e911-9539-b4d5bde08f16",
+        "ModelNumber":"WHR123424",
+        "Variant":"MTG",
+        "Description":"Estufa al piso de 18 p",
+        "Active":true,
+        "RowVersion":"AAAAAAAAJyM="
+    },
+    {
+        "Id":"0c729ef0-ba12-e911-9539-b4d5bde08f16",
+        "PriceId":"08729ef0-ba12-e911-9539-b4d5bde08f16",
+        "ProductFeatureId":null,
+        "ModuleId":"09729ef0-ba12-e911-9539-b4d5bde08f16",
+        "ModelNumber":"WHR12345",
+        "Variant":"KAD",
+        "Description":"Congelador Sidekick 503.00 L / 18",
+        "Active":true,
+        "RowVersion":"AAAAAAAAJxE="
+    },
+    {
+        "Id":"771a0b0a-bb12-e911-9539-b4d5bde08f16",
+        "PriceId":"32f3f69b-a16e-e911-a5ec-10e7c672dd80",
+        "ProductFeatureId":null,
+        "ModuleId":"09729ef0-ba12-e911-9539-b4d5bde08f16",
+        "ModelNumber":"KAD12345",
+        "Variant":"KAD",
+        "Description":"Batidora a",
+        "Active":true,
+        "RowVersion":"AAAAAAAAJxo="
+    }
+]
