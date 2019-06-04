@@ -8,16 +8,18 @@ import Products from './Pages/Products'
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProductDetail from './Pages/ProductDetail';
+import Barajear from './Pages/Barajear';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Menu />
-          <Route exact path="/" >
+          <Route exact path="/home" >
             <Home componentName = "ComponentName" />
           </Route>
-          <Route exact path="/products" component={Products} />
+          <Route path="/products" component={Products} />
+          <Route path="/barajear" component={Barajear} componentName="Barajear"/>
           <Route path="/productdetail/:message" component={ProductDetail} />
         <Footer />
       </Router>

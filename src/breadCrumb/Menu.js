@@ -15,6 +15,9 @@ const Menu = () => {
             <li>
             <Link to="/productDetail/:message">ProductDetail</Link>
             </li>
+            <li>
+            <Link to="/barajear">Barajear</Link>
+            </li>
         </ul>
     );
 }
