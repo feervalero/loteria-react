@@ -10,7 +10,7 @@ class Tablas extends Component {
     
     componentDidMount = () =>{
     localStorage.setItem("tablas",JSON.stringify([{name:"1"},{name:"2"}]));
-        const tablas = JSON.parse(localStorage.getItem("tablas"));
+        //const tablas = JSON.parse(localStorage.getItem("tablas"));
         
         this.setState(
             {tablas:[

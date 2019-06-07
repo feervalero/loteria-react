@@ -8,7 +8,7 @@ class Barajear extends Component {
     state = {};
 
     componentDidMount = () =>{
-        this.setState({numbers:[],cardNumber:[],buttonStyle:{display:"inline-block"}});
+        this.setState({numbers:[],cardNumber:[],buttonStyle:{display:"inline-block",background:"url(http://localhost:3000/button.png) no-repeat",backgroundSize:"100% auto",border:"none",lineHeight:"100%"}});
     }
 
     useAnotherCard = () => {
@@ -35,10 +35,18 @@ class Barajear extends Component {
     render() { 
         if(this.state.numbers){
         return (
-            <div>
-                <MyButtons buttonStyle={this.state.buttonStyle} resetModule={this.resetModule} getRandomNumber={this.useAnotherCard}/>
-                <MyHero card={this.state.cardNumber} />
-                <MyCarousel cards={this.state.numbers} />
+            <div className="container d-flex flex-column">
+                <div>
+                    <MyCarousel cards={this.state.numbers} card={this.state.cardNumber} />
+                </div>
+                <div className="flex-grow-1 p-2" style={{background:"url('http://localhost:3000/background-1.jpg')"}}>
+                    <MyHero cards={this.state.numbers} card={this.state.cardNumber} resetModule={this.resetModule}/>
+                    <MyButtons buttonStyle={this.state.buttonStyle}  getRandomNumber={this.useAnotherCard}/>
+                </div>
+                <div>
+                </div>
+                
+                
                 
             </div>
         );
