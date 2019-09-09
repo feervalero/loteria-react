@@ -9,6 +9,7 @@ class Barajear extends Component {
 
     componentDidMount = () =>{
         this.setState({numbers:[],cardNumber:[],buttonStyle:{display:"inline-block",background:"url(http://localhost:3000/button.png) no-repeat",backgroundSize:"100% auto",border:"none",lineHeight:"100%"}});
+        this.setState({toggle:false});
     }
 
     useAnotherCard = () => {
@@ -25,6 +26,7 @@ class Barajear extends Component {
                 this.useAnotherCard();
             }
         }
+        this.setState({toggle:!this.state.toggle});
         
     }
     resetModule = () =>{
@@ -37,9 +39,9 @@ class Barajear extends Component {
         return (
             <div className="container d-flex flex-column">
                 <div>
-                    <MyCarousel cards={this.state.numbers} card={this.state.cardNumber} />
+                    <MyCarousel toggle={this.state.toggle} cards={this.state.numbers} card={this.state.cardNumber} />
                 </div>
-                <div className="flex-grow-1 p-2" style={{background:"url('http://localhost:3000/background-1.jpg')"}}>
+                <div className="flex-grow-1 p-2" style={{backgroundColor:"rgb(0%, 13.8%, 100%)"}}>
                     <MyHero cards={this.state.numbers} card={this.state.cardNumber} resetModule={this.resetModule}/>
                     <MyButtons buttonStyle={this.state.buttonStyle}  getRandomNumber={this.useAnotherCard}/>
                 </div>

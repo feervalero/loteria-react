@@ -1,6 +1,13 @@
 import React from 'react';
+import { useSpring,animated } from "react-spring";
 
 const MyCarousel = (props) => {
+
+    
+
+    const fade = useSpring({opacity: props.toggle ? 1 : 0});
+
+    console.log(fade);
     var last =  function(array, n) {
         if (array == null) 
           return void 0;
@@ -15,9 +22,9 @@ const MyCarousel = (props) => {
         //<img src={ca} alt="/public/favicon.ico" />
         <div className="row p-2" style={{backgroundColor:"#393"}}>
             <div className="col"></div>
-            <div className="col-8 d-flex justify-content-center">
+            <animated.div  style={fade} className="col-8 d-flex justify-content-center">
                 <img alt="" src={ca} style={{maxHeight:"15vh"}} className="rounded"/>
-            </div>
+            </animated.div>
             <div className="col" style={{textAlign:"right"}}></div>
         </div> 
     )
